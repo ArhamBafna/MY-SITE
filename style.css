@@ -49,7 +49,7 @@ nav a {
     border-radius: 6px;
 }
 
-.panel {
+.card {
     background-color: #ffffff;
     border: 1px solid #dcdcdc;
     border-radius: 12px;
@@ -57,11 +57,11 @@ nav a {
     margin-bottom: 20px;
 }
 
-.text-center {
+.center {
     text-align: center;
 }
 
-.profile-pic {
+.mypic {
     border-radius: 50%;
     border: 3px solid #2b3a4a;
     margin-bottom: 15px;
@@ -87,7 +87,7 @@ hr {
     margin: 15px 0;
 }
 
-.project-box {
+.proj {
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
@@ -95,14 +95,14 @@ hr {
     margin-bottom: 15px;
 }
 
-.project-box h3 {
+.proj h3 {
     color: #1e3a5f;
     font-size: 17px;
     margin-top: 0;
     margin-bottom: 6px;
 }
 
-.interest-box {
+.hobby {
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
@@ -110,14 +110,14 @@ hr {
     margin-bottom: 15px;
 }
 
-.interest-box h3 {
+.hobby h3 {
     color: #1e3a5f;
     font-size: 17px;
     margin-top: 0;
     margin-bottom: 6px;
 }
 
-.button-link {
+.btn {
     background-color: #2b3a4a;
     color: #ffffff;
     padding: 10px 20px;
