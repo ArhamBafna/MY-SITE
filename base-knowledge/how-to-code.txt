@@ -1,0 +1,223 @@
+What is a personal site?
+A personal site is a website about one person. It is divided into sections about who they are, what they do, their hobbies, projects, etc. Think of it as a small space on the internet about you.
+
+Prerequisites:
+A code editor with hackatime installed (VS Code is recommended)
+Basics of html, css and js (we’ll cover it in this guide!)
+A deployment service (Github pages, vercel: these are absolutely free)
+your creativity!
+By the end of this guide, you will:
+
+Know the basics of html, css, js
+have your own personal site
+deploy your site
+lets go!
+
+Structure of a webpage
+Now that we’ve set up our github, vscode, lets move to our project :)
+
+What is HTML?
+HTML stands for Hyper Text Markup Language, it’s basically the structure of a webpage and defines a browser what things are on the page such as links, buttons, images, videos etc.
+CSS stands for Cascading Style Sheets, it is used to format and design the structure, think of adding colors, different fonts, design styles etc
+JS is javascript and is responsible for adding interactivity in a webpage, for example, updating texts, fetching info from APIs.
+
+in short:
+
+HTMl : structure
+CSS : style
+JSS* : behavior/style
+lets go over each one slowly!
+
+HTML
+Before we begin, here’s some info:
+We use <>….</> to create “tags” in html, what are tags you ask?
+Tags are instructions given to a web browser to act a specific way, it could be adding links, creating images etc
+Most tags inside HTML are in pairs i.e. they have a opening <> and a closing ‘slash’ attached to it </>, it is added to tell the browser where that element ends.
+Some examples would be;
+
+<html> ...... </html>
+<body> ...... </body>
+<p> ..... </p>
+But not all the tags are built that way, some tags such as <br>, <hr> etc do not have a closing tag because they dont have any content inside them. For example, <br> tag is used to break lines in HTML while writing, it doesnt has any content inside the tag, its only work is to break a line and start fresh from a new line.
+
+this is a basic code of a HTML:
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+lets go over each tag used here, one by one:
+
+<html>....</html> : It is the root tag of HTML, an html document should always begin with <html> tag and end with </html>
+<head>...</head>: It is used for storing info which isn’t directly visible on the webpage, such as <title> tag or linking to css page (we’ll get to it!) etc
+<title>...</title>: Title is the text which appears on a browser tab
+<body>...</body>: The main visible content visible on the webpage goes here
+<!DOCTYPE html>: tells the browser that the file is written in modern html.
+Woah, that was a lot of info!
+Lets get to coding now and get some work done in setting up in our structure for our personal info page!
+
+When you open any editor, im using VS code here, an html file is saved with .html and “index.html” is the default name servers look for while opening the site.
+For VS Code, you can press ! and you will see something like this appear in your file:
+
+Here are some more HTML tags:
+
+<p>....</p> is use to start a new paragraph.
+<h1> to <h6> tags: for different sizes of text appearing
+<a>...</a>: for adding links
+<img>`: For adding images in the webpage
+<b>...</b>, <i>...</i>: for making the text appear bold and italic etc!
+Your to-do:
+
+Add the title of your webpage under the tag.
+Add a small introduction to your page under the tag.
+
+The <div> tag
+The <div> tag is a container tag for grouping elements. It helps us create a layour, group and organize our elements.
+
+For examples, this gives:
+img
+
+output:
+img2
+
+We havent covered css yet, so I’ll give a short introduction about the used properties.
+code:
+css
+
+background-color: sets the background color of the div used.
+height: sets the height of the div tag.
+width: sets the width of the div tag.
+
+Now, there’s two ways to use the div tag while styling CSS:
+
+class attribute
+id attribute
+class:
+we use class when we want to style one or many elements similarly. It starts with a .classname { css properties }
+eg:
+img
+and here’s the css
+css code
+
+output;
+output
+
+Notice how the intro div is inside the panel div, it is because it is written under the <div class="panel">.
+All the css properties written for intro and panel are different and hence we see two different results. But what if I wanted to have another div in my page with same css properties, we can just use the same class :).
+
+id:
+we use id for a specific unique element on a web page or overriding the class attribute or connecting with javascript. We write it like, #idname { css properties }
+html:
+html2
+css:
+css
+
+result:
+result
+Here, in this, as we can see, both the div boxes are of same size but using “id” we changed the position, size and color of the text.
+
+More HTML elements
+In this step, we’ll take a look at adding more text, links, images, and dividing your page into sections :)
+
+How to add a hyperlink?
+A hyperlink lets people click on text and go to another page or website. In HTML, we use the <a> tag to create links.
+
+<a href="https://github.com/">open GitHub</a>
+here:
+
+tag creates a link
+href stores the URL the link should go to
+“https://github.com/ “ is the website being linked
+“open GitHub” is the text people will click on
+tag closes the link.
+How to add an image?
+To add an image in HTML, we use the <img> tag
+
+<img src="cat.jpg" alt="my cat :3">
+Here’s what each part means:
+
+<img> tag creates an image
+src tells the browser where the image file is (tip: please enter the correct source of your image or it might not show up)
+cat.jpg is the image file name (this should same as the file name you’ve the image)
+alt describes the image if the image does not load.
+Some of other attributes include:
+
+height: for defining the height of the image
+width: for defining the width of the image
+Also, the <img> tag does not need a closing tag.
+
+Creating a navigation bar:
+Add this inside your <body> tag:
+
+<header>
+  <h1>My Personal Site</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+  </nav>
+</header>
+Now add these sections below the header:
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Write a short intro about yourself here.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p>Add your projects here.</p>
+</section>
+Here’s what is happening:
+
+<header> tag is the top part of the website.
+<nav> tag keeps the navigation links.
+<a href="#about">About</a> creates a link that jumps to the section with id="about".
+<section> groups related content together.
+id="about" gives that section a name so the navbar can link to it.
+What happens here is when you give the tag an id, on the site, upon being clicked, it redirects the user to the section which contains the same id.
+
+Adding CSS
+Wooo! Now let’s start with CSS, like before,
+CSS stands for Cascading Style Sheets and it is used to add different colors, fonts, just styling, so our page looks better.
+
+For adding css to your page, you can use it in different ways, I recommend using the external css version, it helps in keeping our project organized.
+So, begin with, start by adding <link rel="stylesheet" href=""> in the <head> tag of your html file.
+rel and href are attributes of <link> tag.
+
+rel="stylesheet" is telling the browser this file contains css.
+href is used for adding the link of the file which contains out css codes.
+    background-color: rgb(115, 115, 212);
+}
+here background-color is the property we’re using for changing the background color of the page, you can choose any color you like. If it doesnt work, please check semicolon, use of correct brackets etc.
+
+background-color: to chage the color of color of the page or an element
+color: is used to change color of texts
+font-size: is used to change the size of text
+font-family: it is used to change different fonts of texts such as comic sans, arial, sans serif etc.
+text-align: used to align text
+width: to set the width of the element used
+height: to set the height of the element used
+margin: to add space outside of an element
+padding: to add space inside of an element
+border: to set the color, type and size of the element’s border
+border-radius: to round the corners of a box element
+woo! these are most common css properties used, now lets get back to our profile page. right now our text is simply there, lets work on css and add borders and make our layout.
+
+et creative!
+Now, that we’ve covered all the basics of HTML and CSS, its your time to get creative and make your projects!
+
+Use the tags explained in the guide or research more if you them
+Make your own custom CSS, add your element to it
+It should at least have 3 sections, about you, your projects, blogs, contact section, some silly stuff etc
+Add images, nav bars, etc
+Maybe a themed website, anything that describes you :)
+Tip: If you help with more tags or adding elements/css which aren’t mentioned in this guide, check out:
+
+w3schools html for HTML
+w3schools css for CSS, these are super helpful sites I personally used.
